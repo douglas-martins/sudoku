@@ -51,7 +51,7 @@ public class AppConfig {
         for (int i = 0; i < 3; i++) {
             ArrayList<MatrixCell> holder = new ArrayList<>();
             for (int j = 0; j < 3; j++) {
-                MatrixCell cell = new MatrixCell(values[j + jump], false, i, j);
+                MatrixCell cell = new MatrixCell(values[j + jump], i, j, false);
                 holder.add(cell);
             }
             matrix.add(i, holder);

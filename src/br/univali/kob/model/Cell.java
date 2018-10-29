@@ -6,11 +6,11 @@ public class Cell {
     private int x;
     private int y;
 
-    public Cell (int cell, boolean isLocked, int x, int y) {
+    public Cell (int cell, int x, int y,  boolean isLocked) {
         this.cell = cell;
-        this.isLocked = isLocked;
         this.x = x;
         this.y = y;
+        this.isLocked = isLocked;
     }
 
     public int getCell() { return cell; }
@@ -25,4 +25,5 @@ public class Cell {
         return y;
     }
 
+    public boolean getIsLocked() { return isLocked; }
 }

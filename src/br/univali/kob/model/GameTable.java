@@ -21,7 +21,9 @@ public class GameTable {
         while (counter < 9) {
             for (int i = 0; i < 3; i++) {
                 objTxt.append("| ").append(tableRowToString(i, counter)).append("\n");
+                swapGameTableRows(i, counter);
             }
+
             counter += 3;
         }
         return objTxt.toString();
@@ -35,5 +37,26 @@ public class GameTable {
             }
         }
         return objTxt.toString();
+    }
+
+    private void shuffleGameTableRows() {
+
+    }
+
+    private void shuffleGameTaleGroups() {
+
+    }
+
+    private void swapGameTableRows(int k, int mod) {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                ArrayList<MatrixCell> holder = table.get(i + mod).getElements().get(k);
+                System.out.println(holder);
+            }
+        }
+    }
+
+    private void swapGameTableGroups() {
+
     }
 }

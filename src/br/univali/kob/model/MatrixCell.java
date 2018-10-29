@@ -1,8 +1,8 @@
 package br.univali.kob.model;
 
 public class MatrixCell extends Cell {
-    public MatrixCell (int cell, boolean isLocked, int x, int y) {
-        super(cell, isLocked, x, y);
+    public MatrixCell (int cell, int x, int y, boolean isLocked) {
+        super(cell, x, y, isLocked);
     }
 
     @Override
@@ -14,7 +14,7 @@ public class MatrixCell extends Cell {
                 .append("\n    cell: " + super.getCell())
                 .append("\n    x position: " + super.getX())
                 .append("\n    y position: " + super.getY())
-                .append("}");
+                .append("}\n");
         return objTxt.toString();
     }
 }

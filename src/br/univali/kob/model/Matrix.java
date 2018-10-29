@@ -25,7 +25,7 @@ public class Matrix {
         for (int i = 0; i < 3; i++) {
             ArrayList<MatrixCell> holder = new ArrayList<>();
             for (int j = 0; j < 3; j++) {
-                MatrixCell cellHolder = new MatrixCell(i, false, i, j);
+                MatrixCell cellHolder = new MatrixCell(i, i, j, false);
                 holder.add(cellHolder);
             }
             elements.add(holder);

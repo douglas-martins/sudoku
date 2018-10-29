@@ -20,8 +20,6 @@ public class GenerateMatrixTest {
         System.out.println(gameTable.tableToString());
     }
 
-
-
     public static void main (String[] args) {
         GenerateMatrixTest generateMatrixTest = new GenerateMatrixTest();
         //generateMatrixTest.runMatrixTest();
