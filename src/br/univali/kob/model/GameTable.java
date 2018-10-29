@@ -14,4 +14,26 @@ public class GameTable {
     private void shuffleGameTable() {
 
     }
+
+    public String tableToString () {
+        StringBuilder objTxt = new StringBuilder();
+        int counter = 0;
+        while (counter < 9) {
+            for (int i = 0; i < 3; i++) {
+                objTxt.append("| ").append(tableRowToString(i, counter)).append("\n");
+            }
+            counter += 3;
+        }
+        return objTxt.toString();
+    }
+
+    private String tableRowToString (int k, int mod) {
+        StringBuilder objTxt = new StringBuilder();
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                objTxt.append(table.get(i + mod).getElements().get(k).get(j).getCell()).append(" | ");
+            }
+        }
+        return objTxt.toString();
+    }
 }
