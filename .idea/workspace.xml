@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3ec6366c-6f61-477f-8db8-6839d9fadcab" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/univali/kob/model/GameDifficulty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/univali/kob/model/GameDifficulty.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/univali/kob/model/GameTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/univali/kob/model/GameTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/univali/kob/model/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/univali/kob/model/Matrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/univali/kob/model/MatrixCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/univali/kob/model/MatrixCell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/univali/kob/model/MatrixPosition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/univali/kob/model/MatrixPosition.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,13 +38,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="8" />
-          <entry key="java" value="8825" />
+          <entry key="java" value="9209" />
           <entry key="txt" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8825" />
+          <entry key="JAVA" value="9209" />
           <entry key="PLAIN_TEXT" value="22" />
         </counts>
       </usages-collector>
@@ -58,11 +56,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/GameTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+            <state relative-caret-position="359">
+              <caret line="48" column="46" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -76,7 +77,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tst/br/univali/kob/tests/GenerateMatrixTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
@@ -123,8 +124,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/GameDifficulty.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="29" lean-forward="true" selection-start-column="29" selection-end-column="29" />
+            <state relative-caret-position="120">
+              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -155,14 +156,14 @@
       <list>
         <option value="$PROJECT_DIR$/src/br/univali/kob/model/CellPosition.java" />
         <option value="$PROJECT_DIR$/src/br/univali/kob/model/BaseMatrix.java" />
-        <option value="$PROJECT_DIR$/src/br/univali/kob/model/GameDifficulty.java" />
         <option value="$PROJECT_DIR$/src/br/univali/kob/model/Cell.java" />
         <option value="$PROJECT_DIR$/src/br/univali/kob/model/AppConfig.java" />
         <option value="$PROJECT_DIR$/src/br/univali/kob/model/MatrixCell.java" />
         <option value="$PROJECT_DIR$/src/br/univali/kob/model/MatrixPosition.java" />
         <option value="$PROJECT_DIR$/src/br/univali/kob/model/Matrix.java" />
-        <option value="$PROJECT_DIR$/src/br/univali/kob/model/GameTable.java" />
         <option value="$PROJECT_DIR$/tst/br/univali/kob/tests/GenerateMatrixTest.java" />
+        <option value="$PROJECT_DIR$/src/br/univali/kob/model/GameDifficulty.java" />
+        <option value="$PROJECT_DIR$/src/br/univali/kob/model/GameTable.java" />
       </list>
     </option>
   </component>
@@ -282,7 +283,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540919333801" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540921031684" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -334,7 +335,7 @@
       <option name="presentableId" value="Default" />
       <updated>1540814247711</updated>
       <workItem from="1540814251676" duration="13561000" />
-      <workItem from="1540831889417" duration="16275000" />
+      <workItem from="1540831889417" duration="17687000" />
     </task>
     <task id="LOCAL-00001" summary="Minors changes">
       <created>1540845447776</created>
@@ -347,11 +348,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29840000" />
+    <option name="totallyTimeSpent" value="31252000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="122" y="23" width="1680" height="1027" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -424,13 +424,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/GameDifficulty.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="29" lean-forward="true" selection-start-column="29" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/MatrixCell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -456,13 +449,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/MatrixPosition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/Matrix.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -478,17 +464,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/GameTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tst/br/univali/kob/tests/GenerateMatrixTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/MatrixPosition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/GameDifficulty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/GameTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="48" column="46" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -9,7 +9,6 @@ public enum GameDifficulty {
     public int getTotalTips() {
         return totalTips;
     }
-
     public int getGridTips() {
         return gridTips;
     }
