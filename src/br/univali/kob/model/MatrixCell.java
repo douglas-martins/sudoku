@@ -14,7 +14,7 @@ public class MatrixCell extends Cell {
                 .append("\n    cell: " + super.getCell())
                 .append("\n    x position: " + super.getX())
                 .append("\n    y position: " + super.getY())
-                .append("}\n");
+                .append("\n}");
         return objTxt.toString();
     }
 }

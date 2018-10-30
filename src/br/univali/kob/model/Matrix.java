@@ -3,8 +3,8 @@ package br.univali.kob.model;
 import java.util.ArrayList;
 
 public class Matrix {
-    private MatrixPosition matrixPosition;
     private ArrayList<ArrayList<MatrixCell>> elements;
+    private MatrixPosition matrixPosition;
 
     public Matrix (MatrixPosition matrixPosition) {
         this.matrixPosition = matrixPosition;
@@ -17,8 +17,16 @@ public class Matrix {
         this.elements = elements;
     }
 
+    public void setElements(ArrayList<ArrayList<MatrixCell>> elements) {
+        this.elements = elements;
+    }
+
     public ArrayList<ArrayList<MatrixCell>> getElements() {
         return elements;
+    }
+
+    public MatrixPosition getMatrixPosition() {
+        return matrixPosition;
     }
 
     public void resetMatrix () {

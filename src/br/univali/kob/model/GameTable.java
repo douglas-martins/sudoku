@@ -9,9 +9,11 @@ public class GameTable {
     public GameTable(GameDifficulty gameDifficulty) {
         this.gameDifficulty = gameDifficulty;
         table = AppConfig.BASE_MATRIX;
+        //swapGameTableRows(0, 2);
+        //swapGameTableGroups(0, 2);
     }
 
-    private void shuffleGameTable() {
+    public void shuffleGameTable() {
 
     }
 
@@ -21,9 +23,7 @@ public class GameTable {
         while (counter < 9) {
             for (int i = 0; i < 3; i++) {
                 objTxt.append("| ").append(tableRowToString(i, counter)).append("\n");
-                swapGameTableRows(i, counter);
             }
-
             counter += 3;
         }
         return objTxt.toString();
@@ -47,16 +47,26 @@ public class GameTable {
 
     }
 
-    private void swapGameTableRows(int k, int mod) {
+    private void swapGameTableRows(int fRow, int sRow) {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                ArrayList<MatrixCell> holder = table.get(i + mod).getElements().get(k);
-                System.out.println(holder);
+                MatrixCell holder = table.get(i).getElements().get(fRow).get(j);
+                table.get(i).getElements().get(fRow).set(j,
+                        table.get(i).getElements().get(sRow).get(j));
+                table.get(i).getElements().get(sRow).set(j, holder);
             }
         }
     }
 
-    private void swapGameTableGroups() {
-
+    private void swapGameTableGroups(int fGroup, int sGroup) {
+        int counter = 0;
+        for (Matrix matrix : table) {
+            if (matrix.getMatrixPosition().getGroup() == fGroup) {
+                ArrayList<ArrayList<MatrixCell>> holder2 = matrix.getElements();
+                matrix.setElements(table.get(counter + (sGroup * 3)).getElements());
+                table.get(counter + (sGroup * 3)).setElements(holder2);
+                counter++;
+            }
+        }
     }
 }

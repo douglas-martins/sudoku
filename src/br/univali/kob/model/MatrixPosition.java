@@ -1,8 +1,9 @@
 package br.univali.kob.model;
 
 public enum MatrixPosition {
-    ZERO(0, 1), ONE(1, 1), TWO(2, 1), THREE(3, 2), FOUR(4, 2),
-    FIVE(5, 2), SIX(6, 3), SEVEN(7, 3), EIGHT(8, 3);
+    ZERO(0, 0), ONE(1, 0), TWO(2, 0),
+    THREE(3, 1), FOUR(4, 1), FIVE(5, 1),
+    SIX(6, 2), SEVEN(7, 2), EIGHT(8, 2);
 
     private int value;
     private int group;
