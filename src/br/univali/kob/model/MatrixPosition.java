@@ -17,4 +17,16 @@ public enum MatrixPosition {
         this.value = value;
         this.group = group;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder objTxt = new StringBuilder();
+        objTxt.append(this.getClass().getName())
+                .append(" @ " + Integer.toHexString(hashCode()))
+                .append(" { ")
+                .append("\n    value = " + value)
+                .append("\n    group = " + group)
+                .append("\n}");
+        return objTxt.toString();
+    }
 }

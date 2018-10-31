@@ -59,6 +59,22 @@ public class Matrix {
         return objTxt.toString();
     }
 
+    @Override
+    public int hashCode () {
+        return elements.hashCode() ^
+                matrixPosition.hashCode() ^
+                emptyCells;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!this.equals(obj)) return false;
+        Matrix matrix = (Matrix)obj;
+        return (elements == matrix.elements || elements.equals(matrix.elements)) &&
+                (matrixPosition == matrix.matrixPosition || matrixPosition.equals(matrix.matrixPosition)) &&
+                emptyCells == matrix.emptyCells;
+    }
+
     public String matrixToString () {
         StringBuilder objTxt = new StringBuilder();
         for (int i = 0; i < 3; i++) {

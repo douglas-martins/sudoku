@@ -16,6 +16,12 @@ public class GameTable {
         removeElements();
     }
 
+    public ArrayList<Matrix> getTable() { return table; }
+
+    public ArrayList<Matrix> getCorrectTable() { return correctTable; }
+
+    public GameDifficulty getGameDifficulty() { return gameDifficulty; }
+
     private void shuffleGameTable() {
         shuffleGameTableRows();
         shuffleGameTableGroups();
@@ -111,19 +117,19 @@ public class GameTable {
         return numbers[new Random().nextInt(3)];
     }
 
-    public String tableToString () {
+    public String tableToString (ArrayList<Matrix> table) {
         StringBuilder objTxt = new StringBuilder();
         int counter = 0;
         while (counter < 9) {
             for (int i = 0; i < 3; i++) {
-                objTxt.append("| ").append(tableRowToString(i, counter)).append("\n");
+                objTxt.append("| ").append(tableRowToString(table, i, counter)).append("\n");
             }
             counter += 3;
         }
         return objTxt.toString();
     }
 
-    private String tableRowToString (int k, int mod) {
+    private String tableRowToString (ArrayList<Matrix> table, int k, int mod) {
         StringBuilder objTxt = new StringBuilder();
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -139,5 +145,32 @@ public class GameTable {
             total += matrix.getEmptyCells();
         }
         return total;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder objTxt = new StringBuilder();
+        objTxt.append(this.getClass().getName())
+                .append(" @ " + Integer.toHexString(this.getClass().hashCode()))
+                .append(" { ")
+                .append("\n    table = " + tableToString(table))
+                .append("\n    correctTable = " + tableToString(correctTable))
+                .append("\n    gameDifficulty = " + gameDifficulty.toString())
+                .append("\n}");
+        return objTxt.toString();
+    }
+
+    @Override
+    public int hashCode() {
+        return table.hashCode() ^ correctTable.hashCode() ^ gameDifficulty.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!this.equals(obj)) return false;
+        GameTable gameTable = (GameTable)obj;
+        return (table == gameTable.table || table.equals(gameTable.table)) &&
+                (correctTable == gameTable.correctTable || correctTable.equals(gameTable.correctTable)) &&
+                (gameDifficulty == gameTable.gameDifficulty || gameDifficulty.equals(gameTable.gameDifficulty));
     }
 }

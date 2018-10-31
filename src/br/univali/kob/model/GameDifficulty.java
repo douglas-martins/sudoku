@@ -17,4 +17,16 @@ public enum GameDifficulty {
         this.totalTips = totalTips;
         this.minGridTips = minGridTips;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder objTxt = new StringBuilder();
+        objTxt.append(this.getClass().getName())
+                .append(" @ " + Integer.toHexString(hashCode()))
+                .append(" { ")
+                .append("\n    totalTips = " + totalTips)
+                .append("\n    minGridTips = " + minGridTips)
+                .append("\n}");
+        return objTxt.toString();
+    }
 }

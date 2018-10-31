@@ -17,7 +17,7 @@ public class GenerateMatrixTest {
 
     public void runGameTableTest () {
         GameTable gameTable = new GameTable(GameDifficulty.EASY);
-        System.out.println(gameTable.tableToString());
+        System.out.println(gameTable.tableToString(gameTable.getTable()));
     }
 
     public static void main (String[] args) {
