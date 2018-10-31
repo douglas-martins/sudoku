@@ -5,10 +5,12 @@ import java.util.ArrayList;
 public class Matrix {
     private ArrayList<ArrayList<MatrixCell>> elements;
     private MatrixPosition matrixPosition;
+    private int emptyCells;
 
     public Matrix (MatrixPosition matrixPosition) {
         this.matrixPosition = matrixPosition;
         elements = new ArrayList<>();
+        emptyCells = 0;
         resetMatrix();
     }
 
@@ -28,6 +30,10 @@ public class Matrix {
     public MatrixPosition getMatrixPosition() {
         return matrixPosition;
     }
+
+    public int getEmptyCells() { return emptyCells; }
+
+    public void setEmptyCells(int emptyCells) { this.emptyCells = emptyCells; }
 
     public void resetMatrix () {
         for (int i = 0; i < 3; i++) {

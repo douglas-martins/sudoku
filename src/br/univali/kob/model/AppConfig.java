@@ -6,6 +6,7 @@ public class AppConfig {
     public static final String APP_NAME;
     public static final String APP_VERSION;
     public static final ArrayList<Matrix> BASE_MATRIX;
+    public static final int SUDOKU_CELLS_NUMBER;
 
     private static final ArrayList<Object> SETTINGS = new ArrayList<>();
 
@@ -14,25 +15,27 @@ public class AppConfig {
         APP_NAME = (String)SETTINGS.get(0);
         APP_VERSION = (String)SETTINGS.get(1);
         BASE_MATRIX = (ArrayList<Matrix>)SETTINGS.get(2);
+        SUDOKU_CELLS_NUMBER = (int)SETTINGS.get(3);
     }
 
     private static void loadSettings() {
         SETTINGS.add("Sudoku");
         SETTINGS.add("1.0");
         SETTINGS.add(generateBaseMatrix());
+        SETTINGS.add(81);
     }
 
     private static ArrayList<Matrix> generateBaseMatrix () {
         ArrayList<Matrix> matrix = new ArrayList<>();
-        int[] firstMatrixValues = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-        int[] secondMatrixValues = {4, 5, 6, 7, 8, 9, 1, 2, 3};
-        int[] thirdMatrixValues = {7, 8, 9, 1, 2, 3, 4, 5, 6};
-        int[] fourthMatrixValues = {2, 3, 4, 5, 6, 7, 8, 9, 1};
-        int[] fifthMatrixValues = {5, 6, 7, 8, 9, 1, 2, 3, 1};
-        int[] sixthMatrixValues = {8, 9, 1, 2, 3, 4, 5, 6, 7};
-        int[] seventhMatrixValues = {3, 4, 5, 6, 7, 8, 9, 1, 2};
-        int[] eighthMatrixValues = {6, 7, 8, 9, 1, 2, 3, 4, 5};
-        int[] ninthMatrixValues = {9, 1, 2, 3, 4, 5, 6, 7, 8};
+        int[] firstMatrixValues =   { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        int[] secondMatrixValues =  { 4, 5, 6, 7, 8, 9, 1, 2, 3 };
+        int[] thirdMatrixValues =   { 7, 8, 9, 1, 2, 3, 4, 5, 6 };
+        int[] fourthMatrixValues =  { 2, 3, 4, 5, 6, 7, 8, 9, 1 };
+        int[] fifthMatrixValues =   { 5, 6, 7, 8, 9, 1, 2, 3, 4 };
+        int[] sixthMatrixValues =   { 8, 9, 1, 2, 3, 4, 5, 6, 7 };
+        int[] seventhMatrixValues = { 3, 4, 5, 6, 7, 8, 9, 1, 2 };
+        int[] eighthMatrixValues =  { 6, 7, 8, 9, 1, 2, 3, 4, 5 };
+        int[] ninthMatrixValues =   { 9, 1, 2, 3, 4, 5, 6, 7, 8 };
         matrix.add(0, smallBaseMatrix(MatrixPosition.ZERO, firstMatrixValues));
         matrix.add(1, smallBaseMatrix(MatrixPosition.ONE, secondMatrixValues));
         matrix.add(2, smallBaseMatrix(MatrixPosition.TWO, thirdMatrixValues));
