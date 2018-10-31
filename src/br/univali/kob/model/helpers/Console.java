@@ -2,6 +2,12 @@ package br.univali.kob.model.helpers;
 
 import java.util.Scanner;
 
+/** Representa uma célula.
+ * @author Marcello Thiry
+ * @author marcello.thiry@gmail.com
+ * @version 1.0
+ * @since 1.0
+ */
 public final class Console {
     /**
      * Arquivo para leitura diretamente do console (System.in).

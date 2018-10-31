@@ -1,16 +1,86 @@
 package br.univali.kob.model;
 
+/** Representa posição da sub-matriz na matriz/grid/mesa.
+ * @author Douglas Martins
+ * @author douglasfabiamartins@hotmail.com
+ * @version 1.0
+ * @since 1.0
+ */
 public enum MatrixPosition {
-    ZERO(0, 0), ONE(1, 0), TWO(2, 0),
-    THREE(3, 1), FOUR(4, 1), FIVE(5, 1),
-    SIX(6, 2), SEVEN(7, 2), EIGHT(8, 2);
+    /**
+     * Posição zero.
+     * 1 valor da posição.
+     * 2 grupo da posição.
+     */
+    ZERO(0, 0),
+    /**
+     * Posição um.
+     * 1 valor da posição.
+     * 2 grupo da posição.
+     */
+    ONE(1, 0),
+    /**
+     * Posição dois.
+     * 1 valor da posição.
+     * 2 grupo da posição.
+     */
+    TWO(2, 0),
+    /**
+     * Posição três.
+     * 1 valor da posição.
+     * 2 grupo da posição.
+     */
+    THREE(3, 1),
+    /**
+     * Posição quatro.
+     * 1 valor da posição.
+     * 2 grupo da posição.
+     */
+    FOUR(4, 1),
+    /**
+     * Posição cinco.
+     * 1 valor da posição.
+     * 2 grupo da posição.
+     */
+    FIVE(5, 1),
+    /**
+     * Posição seis.
+     * 1 valor da posição.
+     * 2 grupo da posição.
+     */
+    SIX(6, 2),
+    /**
+     * Posição sete.
+     * 1 valor da posição.
+     * 2 grupo da posição.
+     */
+    SEVEN(7, 2),
+    /**
+     * Posição oito.
+     * 1 valor da posição.
+     * 2 grupo da posição.
+     */
+    EIGHT(8, 2);
 
+    /**
+     * Valor da posição.
+     */
     private int value;
+    /**
+     * Valor do grupo da posição.
+     */
     private int group;
 
-    public int getValue () {
-        return value;
-    }
+    /**
+     * Retorna o valor da posição.
+     * @return int com o valor da posição.
+     */
+    public int getValue () { return value; }
+
+    /**
+     * Retorna o valor do grupo.
+     * @return int com o valor do grupo.
+     */
     public int getGroup() { return group; }
 
     private MatrixPosition(int value, int group) {

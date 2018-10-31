@@ -1,42 +1,94 @@
 package br.univali.kob.model;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 
+/** Representa a matriz/grid/mesa da aplicação.
+ * @author Douglas Martins
+ * @author douglasfabiamartins@hotmail.com
+ * @version 1.0
+ * @since 1.0
+ */
 public class GameTable {
+    /**
+     * Matriz/grid/mesa da aplicação.
+     */
     private ArrayList<Matrix> table;
+    /**
+     * Matriz correta dessa sessão do jogo.
+     */
     private final ArrayList<Matrix> correctTable;
+    /**
+     * Dificuldade da aplicação que será gerada.
+     */
     private GameDifficulty gameDifficulty;
 
+    /**
+     * Construtor padrão.
+     * @param gameDifficulty valor da dificuldade do jogo nesta sessão.
+     */
     public GameTable(GameDifficulty gameDifficulty) {
         this.gameDifficulty = gameDifficulty;
         table = new ArrayList<>(AppConfig.BASE_MATRIX);
-        correctTable = new ArrayList<>(table);
         shuffleGameTable();
-        removeElements();
+        correctTable = new ArrayList<>();
+        for (int i = 0; i < table.size(); i++) {
+            MatrixPosition matrixPosition = table.get(i).getMatrixPosition();
+            ArrayList<ArrayList<MatrixCell>> elements = table.get(i).getElements();
+            Matrix matrix = new Matrix(matrixPosition, elements);
+            correctTable.add(matrix);
+        }
+        //correctTable = new ArrayList<>((ArrayList<Matrix>)table.clone());
+        removeElementsByGameDifficulty();
     }
 
+    /**
+     * Retorna o valor da matriz/grid/mesa da aplicação.
+     * @return ArrayList<Matrix> com o valor da matriz.
+     */
     public ArrayList<Matrix> getTable() { return table; }
 
+    /**
+     * Retorna o valor da matriz/grid/mesa correta da aplicação.
+     * @return ArrayList<Matrix> com o valor da matriz correta.
+     */
     public ArrayList<Matrix> getCorrectTable() { return correctTable; }
 
+    /**
+     * Retorna o valor da dificuldade do jogo.
+     * @return GameDifficulty com o valor da dificuldade do jogo.
+     */
     public GameDifficulty getGameDifficulty() { return gameDifficulty; }
 
+    /**
+     * Embaralha a matriz/grid/mesa da sessão.
+     */
     private void shuffleGameTable() {
         shuffleGameTableRows();
         shuffleGameTableGroups();
     }
 
+    /**
+     * Embaralha as linhas da sub-matriz da sessão.
+     */
     private void shuffleGameTableRows() {
         int[] rows = shuffleGameTableType();
         swapGameTableRows(rows[0], rows[1]);
     }
 
+    /**
+     * Embaralha os grupos de sub-matriz da sessão.
+     */
     private void shuffleGameTableGroups() {
         int[] groups = shuffleGameTableType();
         swapGameTableGroups(groups[0], groups[1]);
     }
 
+    /**
+     * Embaralha as sub-matriz (por linhas e grupos).
+     * @return int[] com os valores embaralhados.
+     */
     private int[] shuffleGameTableType() {
         int first = 0;
         int second = 0;
@@ -47,6 +99,11 @@ public class GameTable {
         return new int[] { first, second };
     }
 
+    /**
+     * Troca linhas da matriz/grid/mesa (ou sub-matriz).
+     * @param fRow posição da primeira linha que será trocada.
+     * @param sRow posição da segunda linha que será trocada.
+     */
     private void swapGameTableRows(int fRow, int sRow) { // primeiro n pode ser maior que o segundo
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -58,6 +115,11 @@ public class GameTable {
         }
     }
 
+    /**
+     * Troca grupos da matriz/grid/mesa (trocando as sub-matriz).
+     * @param fGroup posição do primeiro grupo que será trocada.
+     * @param sGroup posição do segundo grupo que será trocada.
+     */
     private void swapGameTableGroups(int fGroup, int sGroup) { // primeiro n pode ser maior que o segundo
         int counter = 0;
         for (Matrix matrix : table) {
@@ -70,7 +132,10 @@ public class GameTable {
         }
     }
 
-    private void removeElements() {
+    /**
+     * Remove os elementos na matriz (ou sub-matriz), a partir da dificuldade do jogo.
+     */
+    private void removeElementsByGameDifficulty() {
         int emptyTotal = 0;
         do {
             makeGameTableTips();
@@ -78,6 +143,9 @@ public class GameTable {
         } while (emptyTotal < (AppConfig.SUDOKU_CELLS_NUMBER - gameDifficulty.getTotalTips()));
     }
 
+    /**
+     * Adiciona as posições sem dicas (0) na matriz/grid/mesa (deixando as dicas isLocked = false).
+     */
     private void makeGameTableTips() {
         ArrayList<int[]> elementsPos = new ArrayList<>();
         ArrayList<int[]> holder = new ArrayList<>(elementsPos);
@@ -100,46 +168,80 @@ public class GameTable {
         }
     }
 
+    /**
+     * Remove uma célula (coloca em 0) da matriz/grid/mesa (célula contida na sub-matriz).
+     * @param holder ArrayList<int[]> das posições disponíveis na sub-matriz
+     *              (que não estão em 0 no valor da célula).
+     * @param matrix Matrix que será alterada a célula.
+     * @param counter int com o valor da quantidade real de células disponíveis
+     *                usada para gerar uma posição aleátoria.
+     * @return ArrayList<int[]> com os valores atualizado das posições diponíveis
+     *         após remover um elemento.
+     */
     private ArrayList<int[]> removeOneCellFromGrid(ArrayList<int[]> holder, Matrix matrix, int counter) {
         int elementPosition = new Random().nextInt(counter);
         if (matrix.getElements().get(holder.get(elementPosition)[0])
-                .get(holder.get(elementPosition)[1]).getCell() == 0) return new ArrayList<>(holder);
+                .get(holder.get(elementPosition)[1]).getCell().getCellValue() == 0) return new ArrayList<>(holder);
 
         matrix.getElements().get(holder.get(elementPosition)[0])
-                .get(holder.get(elementPosition)[1]).setCell(0);
+                .get(holder.get(elementPosition)[1])
+                .setCell(new Cell(0,
+                        holder.get(elementPosition)[0],
+                        holder.get(elementPosition)[1],
+                        false));
         matrix.setEmptyCells(matrix.getEmptyCells() + 1);
         holder.remove(elementPosition);
         return new ArrayList<>(holder);
     }
 
+    /**
+     * Gera um número aleátorio (dentro do limites da sub-matriz).
+     * @return int com o valor da posição da sub-matriz.
+     */
     private int randomNumberMatrixBounds() {
         int [] numbers = { 0, 1, 2 };
         return numbers[new Random().nextInt(3)];
     }
 
-    public String tableToString (ArrayList<Matrix> table) {
+    /**
+     * Imprimi a matriz/grid/mesa.
+     * @param holderTable matriz/grid/mesa que será imprimida.
+     * @return String com a matriz/grid/mesa.
+     */
+    public String tableToString (ArrayList<Matrix> holderTable) {
         StringBuilder objTxt = new StringBuilder();
         int counter = 0;
         while (counter < 9) {
             for (int i = 0; i < 3; i++) {
-                objTxt.append("| ").append(tableRowToString(table, i, counter)).append("\n");
+                objTxt.append("| ").append(tableRowToString(holderTable, i, counter)).append("\n");
             }
             counter += 3;
         }
         return objTxt.toString();
     }
 
+    /**
+     * Imprimi uma linha da matriz.
+     * @param table matriz/grid/mesa da onde iremos imprimir a linha,
+     * @param k posição na sub-matriz da célula que será imprimida.
+     * @param mod modificador para pular de uma linha para outra na sub-matriz.
+     * @return String com a linha da matriz.
+     */
     private String tableRowToString (ArrayList<Matrix> table, int k, int mod) {
         StringBuilder objTxt = new StringBuilder();
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                objTxt.append(table.get(i + mod).getElements().get(k).get(j).getCell()).append(" | ");
+                objTxt.append(table.get(i + mod).getElements().get(k).get(j).getCell().getCellValue()).append(" | ");
             }
         }
         return objTxt.toString();
     }
 
-    private int getGameTableEmptyCellsNumber() {
+    /**
+     * Retorna o valor total de células vazias (0) na matriz/grid/mesa.
+     * @return int com o valor toal de células vazias (0).
+     */
+    public int getGameTableEmptyCellsNumber() {
         int total = 0;
         for (Matrix matrix : table) {
             total += matrix.getEmptyCells();
@@ -153,8 +255,8 @@ public class GameTable {
         objTxt.append(this.getClass().getName())
                 .append(" @ " + Integer.toHexString(this.getClass().hashCode()))
                 .append(" { ")
-                .append("\n    table = " + tableToString(table))
-                .append("\n    correctTable = " + tableToString(correctTable))
+                .append("\n    table = \n" + tableToString(table))
+                .append("\n    correctTable = \n" + tableToString(correctTable))
                 .append("\n    gameDifficulty = " + gameDifficulty.toString())
                 .append("\n}");
         return objTxt.toString();
