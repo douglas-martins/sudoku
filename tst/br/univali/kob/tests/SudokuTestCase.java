@@ -16,26 +16,26 @@ public class SudokuTestCase {
     }
 
     public void runGameTableTestCase() {
-        GameTable gameTable = new GameTable(GameDifficulty.HARD);
-        System.out.println(gameTable.tableToString(gameTable.getTable()));
+        SudokuGenerator sudokuGenerator = new SudokuGenerator(GameDifficulty.HARD);
+        System.out.println(sudokuGenerator.tableToString(sudokuGenerator.getTable()));
         System.out.println("BASE MATRIX: ");
-        System.out.println(gameTable.tableToString(AppConfig.BASE_MATRIX));
+        System.out.println(sudokuGenerator.tableToString(AppConfig.BASE_MATRIX));
     }
 
     public void runSudokuTestCase() {
-        SudokuGenerator sudokuGenerator = new SudokuGenerator(GameDifficulty.HARD);
-        System.out.println("GAME TABLE: \n" + sudokuGenerator.getGameTable().tableToString(
-                sudokuGenerator.getGameTable().getTable()));
-        System.out.println("CORRECT TABLE: \n" + sudokuGenerator.getGameTable().tableToString(
-                sudokuGenerator.getGameTable().getCorrectTable()));
+        SudokuGame sudokuGame = new SudokuGame(GameDifficulty.HARD);
+        System.out.println("GAME TABLE: \n" + sudokuGame.getSudoku().tableToString(
+                sudokuGame.getSudoku().getTable()));
+        System.out.println("CORRECT TABLE: \n" + sudokuGame.getSudoku().tableToString(
+                sudokuGame.getSudoku().getCorrectTable()));
     }
 
     public void runSudokuApplicationViewTestCase() {
         SudokuApplicationView sudokuApplicationView = new SudokuApplicationView();
         sudokuApplicationView.placeMatrixCell();
         System.out.println("GAME TABLE: ");
-        System.out.println(sudokuApplicationView.getSudokuGenerator().getGameTable()
-                .tableToString(sudokuApplicationView.getSudokuGenerator().getGameTable().getTable()));
+        System.out.println(sudokuApplicationView.getSudokuGame().getSudoku()
+                .tableToString(sudokuApplicationView.getSudokuGame().getSudoku().getTable()));
     }
 
     public static void main (String[] args) {

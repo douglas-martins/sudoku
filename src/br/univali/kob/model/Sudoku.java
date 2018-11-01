@@ -4,7 +4,8 @@ public class Sudoku {
     private SudokuApplicationView sudokuApplicationView;
 
     public void runGameSession() {
-
-        //sudokuApplicationView = new SudokuApplicationView()
+        while (!sudokuApplicationView.getSudokuGame().isGameOver()) {
+            sudokuApplicationView.askForPlay();
+        }
     }
 }

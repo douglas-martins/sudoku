@@ -98,14 +98,12 @@ public class Matrix {
      * Reseta a matriz (valor 0 para todas as células).
      */
     public void resetMatrix () {
-        //emptyCells = 0;
         elements = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
             ArrayList<MatrixCell> holder = new ArrayList<>();
             for (int j = 0; j < 3; j++) {
                 MatrixCell cellHolder = new MatrixCell(0, i, j, false);
                 holder.add(cellHolder);
-                //emptyCells++;
             }
             elements.add(holder);
         }
