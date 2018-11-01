@@ -3,7 +3,7 @@ package br.univali.kob.model;
 import java.util.ArrayList;
 import java.util.Random;
 
-/** zRepresenta a geração do Sudoku
+/** Representa a geração do Sudoku
  * matriz/grid/mesa da aplicação.
  * @author Douglas Martins
  * @author douglasfabiamartins@hotmail.com

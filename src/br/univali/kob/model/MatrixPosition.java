@@ -1,7 +1,5 @@
 package br.univali.kob.model;
 
-import java.util.ArrayList;
-
 /** Representa posição da sub-matriz na matriz/grid/mesa.
  * @author Douglas Martins
  * @author douglasfabiamartins@hotmail.com
@@ -13,6 +11,7 @@ public enum MatrixPosition {
      * Posição zero.
      * 1 valor da posição.
      * 2 grupo da posição.
+     * 3 posições dos elemenots da sub-matriz na table do game.
      */
     ZERO(0, 0, new int[][]{
             { 0, 0 }, { 0, 1 }, { 0, 2 },  { 1, 0 }, { 1, 1 }, { 1, 2 }, { 2, 0 }, { 2, 1 }, { 2, 2 }
@@ -21,6 +20,7 @@ public enum MatrixPosition {
      * Posição um.
      * 1 valor da posição.
      * 2 grupo da posição.
+     * 3 posições dos elemenots da sub-matriz na table do game.
      */
     ONE(1, 0, new int[][]{
             { 0, 3 }, { 0, 4 }, { 0, 5 },  { 1, 3 }, { 1, 4 }, { 1, 5 }, { 2, 3 }, { 2, 4 }, { 2, 5 }
@@ -29,6 +29,7 @@ public enum MatrixPosition {
      * Posição dois.
      * 1 valor da posição.
      * 2 grupo da posição.
+     * 3 posições dos elemenots da sub-matriz na table do game.
      */
     TWO(2, 0, new int[][]{
             { 0, 6 }, { 0, 7 }, { 0, 8 },  { 1, 6 }, { 1, 7 }, { 1, 8 }, { 2, 6 }, { 2, 7 }, { 2, 8 }
@@ -37,6 +38,7 @@ public enum MatrixPosition {
      * Posição três.
      * 1 valor da posição.
      * 2 grupo da posição.
+     * 3 posições dos elemenots da sub-matriz na table do game.
      */
     THREE(3, 1, new int[][]{
             { 3, 0 }, { 3, 1 }, { 3, 2 },  { 4, 0 }, { 4, 1 }, { 4, 2 }, { 5, 0 }, { 5, 1 }, { 5, 2 }
@@ -45,6 +47,7 @@ public enum MatrixPosition {
      * Posição quatro.
      * 1 valor da posição.
      * 2 grupo da posição.
+     * 3 posições dos elemenots da sub-matriz na table do game.
      */
     FOUR(4, 1, new int[][]{
             { 3, 3 }, { 3, 4 }, { 3, 5 },  { 4, 3 }, { 4, 4 }, { 4, 5 }, { 5, 3 }, { 5, 4 }, { 5, 5 }
@@ -53,6 +56,7 @@ public enum MatrixPosition {
      * Posição cinco.
      * 1 valor da posição.
      * 2 grupo da posição.
+     * 3 posições dos elemenots da sub-matriz na table do game.
      */
     FIVE(5, 1, new int[][]{
             { 3, 6 }, { 3, 7 }, { 3, 8 },  { 4, 6 }, { 4, 7 }, { 4, 8 }, { 5, 6 }, { 5, 7 }, { 5, 8 }
@@ -61,6 +65,7 @@ public enum MatrixPosition {
      * Posição seis.
      * 1 valor da posição.
      * 2 grupo da posição.
+     * 3 posições dos elemenots da sub-matriz na table do game.
      */
     SIX(6, 2, new int[][]{
             { 6, 0 }, { 6, 1 }, { 6, 2 },  { 7, 0 }, { 7, 1 }, { 7, 2 }, { 8, 0 }, { 8, 1 }, { 8, 2 }
@@ -69,6 +74,7 @@ public enum MatrixPosition {
      * Posição sete.
      * 1 valor da posição.
      * 2 grupo da posição.
+     * 3 posições dos elemenots da sub-matriz na table do game.
      */
     SEVEN(7, 2, new int[][]{
             { 6, 3 }, { 6, 4 }, { 6, 5 },  { 7, 3 }, { 7, 4 }, { 7, 5 }, { 8, 3 }, { 8, 4 }, { 8, 5 }
@@ -77,6 +83,7 @@ public enum MatrixPosition {
      * Posição oito.
      * 1 valor da posição.
      * 2 grupo da posição.
+     * 3 posições dos elemenots da sub-matriz na table do game.
      */
     EIGHT(8, 2, new int[][]{
             { 6, 6 }, { 6, 7 }, { 6, 8 },  { 7, 6 }, { 7, 7 }, { 7, 8 }, { 8, 6 }, { 8, 7 }, { 8, 8 }
@@ -92,6 +99,9 @@ public enum MatrixPosition {
      */
     private int group;
 
+    /**
+     * Matriz com a posição dos elemenots da sub-matriz na table do game.
+     */
     private int[][] xYGroupPosition;
 
     /**
@@ -100,6 +110,10 @@ public enum MatrixPosition {
      */
     public int getValue () { return value; }
 
+    /**
+     *
+     * @return
+     */
     public int[][] getxYGroupPosition() { return xYGroupPosition; }
 
     /**
@@ -108,6 +122,12 @@ public enum MatrixPosition {
      */
     public int getGroup() { return group; }
 
+    /**
+     * Retorna o valor (x ou y) da posição do elemento da sub-matriz
+     * do contexto da table do game para a sub-matriz.
+     * @param position valor da posição que será convertido.
+     * @return int com o valor convertido de contexto.
+     */
     public static int adjustSubMatrixPosition(int position) {
         int posReturn = position;
         if (position <= 5 && position > 2) {
@@ -118,6 +138,12 @@ public enum MatrixPosition {
         return posReturn;
     }
 
+    /**
+     *
+     * @param value
+     * @param group
+     * @param xYGroupPosition
+     */
     private MatrixPosition(int value, int group, int[][] xYGroupPosition) {
         this.value = value;
         this.group = group;
