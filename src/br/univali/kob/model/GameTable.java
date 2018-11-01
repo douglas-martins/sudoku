@@ -165,7 +165,7 @@ public class GameTable {
             while (counter > 0) {
                 holder = removeOneCellFromGrid(holder, matrix, counter);
                 counter--;
-                if (matrix.getEmptyCells() >= gameDifficulty.getMinGridTips())counter = 0;
+                if (matrix.getEmptyCells() >= gameDifficulty.getMinGridTips()) counter = 0;
             }
         }
     }
@@ -210,7 +210,7 @@ public class GameTable {
      * @param holderTable matriz/grid/mesa que será imprimida.
      * @return String com a matriz/grid/mesa.
      */
-    public static String tableToString (ArrayList<Matrix> holderTable) {
+    public String tableToString (ArrayList<Matrix> holderTable) {
         StringBuilder objTxt = new StringBuilder();
         int counter = 0;
         while (counter < 9) {
@@ -229,7 +229,7 @@ public class GameTable {
      * @param mod modificador para pular de uma linha para outra na sub-matriz.
      * @return String com a linha da matriz.
      */
-    private static String tableRowToString (ArrayList<Matrix> holderTable, int k, int mod) {
+    private String tableRowToString (ArrayList<Matrix> holderTable, int k, int mod) {
         StringBuilder objTxt = new StringBuilder();
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {

@@ -47,6 +47,10 @@ public class Matrix {
         this.elements = elements;
     }
 
+    /**
+     * Construtor para copia de objeto "deep clone".
+     * @param matrix objeto Matrix o qual irá ser copiado
+     */
     public Matrix (Matrix matrix) {
         resetMatrix();
         for (int i = 0; i < matrix.elements.size(); i++) {

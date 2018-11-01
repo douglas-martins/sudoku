@@ -2,7 +2,7 @@ package br.univali.kob.model.helpers;
 
 import java.util.Scanner;
 
-/** Representa uma célula.
+/** Representa controle de escrita e leitura no console.
  * @author Marcello Thiry
  * @author marcello.thiry@gmail.com
  * @version 1.0

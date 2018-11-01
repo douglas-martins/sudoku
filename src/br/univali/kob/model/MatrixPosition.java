@@ -83,6 +83,16 @@ public enum MatrixPosition {
      */
     public int getGroup() { return group; }
 
+    public static int adjustSubMatrixPosition(int position) {
+        int posReturn = position;
+        if (position <= 5 && position > 2) {
+            posReturn -= 3;
+        } else if (position > 5) {
+            posReturn -= 2 * 3;
+        }
+        return posReturn;
+    }
+
     private MatrixPosition(int value, int group) {
         this.value = value;
         this.group = group;

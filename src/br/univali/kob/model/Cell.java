@@ -40,6 +40,10 @@ public class Cell {
         this.isLocked = isLocked;
     }
 
+    /**
+     * Construtor para copia de objeto "deep clone".
+     * @param cell objeto Cell que irá ser copiado.
+     */
     public Cell (Cell cell) {
         this.cell = cell.cell;
         this.x = cell.x;

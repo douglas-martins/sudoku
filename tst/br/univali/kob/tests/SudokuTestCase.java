@@ -19,22 +19,31 @@ public class SudokuTestCase {
         GameTable gameTable = new GameTable(GameDifficulty.HARD);
         System.out.println(gameTable.tableToString(gameTable.getTable()));
         System.out.println("BASE MATRIX: ");
-        System.out.println(GameTable.tableToString(AppConfig.BASE_MATRIX));
+        System.out.println(gameTable.tableToString(AppConfig.BASE_MATRIX));
     }
 
     public void runSudokuTestCase() {
-//        System.out.println(GameTable.tableToString(AppConfig.BASE_MATRIX));
-        Sudoku sudoku = new Sudoku(GameDifficulty.HARD);
-//        System.out.println("GAME TABLE: \n" + sudoku.getGameTable().tableToString(sudoku.getGameTable().getTable()));
-//        System.out.println("BASE MATRIX: ");
-        System.out.println(GameTable.tableToString(AppConfig.BASE_MATRIX));
+        SudokuGenerator sudokuGenerator = new SudokuGenerator(GameDifficulty.HARD);
+        System.out.println("GAME TABLE: \n" + sudokuGenerator.getGameTable().tableToString(
+                sudokuGenerator.getGameTable().getTable()));
+        System.out.println("CORRECT TABLE: \n" + sudokuGenerator.getGameTable().tableToString(
+                sudokuGenerator.getGameTable().getCorrectTable()));
+    }
+
+    public void runSudokuApplicationViewTestCase() {
+        SudokuApplicationView sudokuApplicationView = new SudokuApplicationView();
+        sudokuApplicationView.placeMatrixCell();
+        System.out.println("GAME TABLE: ");
+        System.out.println(sudokuApplicationView.getSudokuGenerator().getGameTable()
+                .tableToString(sudokuApplicationView.getSudokuGenerator().getGameTable().getTable()));
     }
 
     public static void main (String[] args) {
         SudokuTestCase sudokuTestCase = new SudokuTestCase();
-        //sudokuTestCase.runMatrixTest();
-        //sudokuTestCase.runBaseMatrixTest();
-        //sudokuTestCase.runGameTableTestCase();
-        sudokuTestCase.runSudokuTestCase();
+        // sudokuTestCase.runMatrixTest();
+        // sudokuTestCase.runBaseMatrixTest();
+        // sudokuTestCase.runGameTableTestCase();
+        // sudokuTestCase.runSudokuTestCase();
+        sudokuTestCase.runSudokuApplicationViewTestCase();
     }
 }

@@ -29,9 +29,11 @@ public class MatrixCell {
      */
     public MatrixCell (int cell, int x, int y) { this.cell = new Cell(cell, x, y); }
 
-    public MatrixCell(MatrixCell matrixCell) {
-        this.cell = new Cell(matrixCell.cell);
-    }
+    /**
+     * Construtor para copia de objeto "deep clone".
+     * @param matrixCell objeto MatrixCell qual irá ser copiado.
+     */
+    public MatrixCell(MatrixCell matrixCell) { this.cell = new Cell(matrixCell.cell); }
 
     /**
      * Retorna o valor da célula.
