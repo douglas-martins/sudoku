@@ -47,6 +47,17 @@ public class Matrix {
         this.elements = elements;
     }
 
+    public Matrix (Matrix matrix) {
+        resetMatrix();
+        for (int i = 0; i < matrix.elements.size(); i++) {
+            for (int j = 0; j < matrix.elements.get(i).size(); j++) {
+                this.elements.get(i).get(j)
+                        .setCell(new Cell(matrix.getElements().get(i).get(j).getCell()));
+            }
+        }
+        this.matrixPosition = matrix.matrixPosition;
+    }
+
     /**
      * Modifica o valor da matriz (sub-matriz na aplicação) de maneira geral.
      * @param elements novo valor para a matriz (sub-matriz na aplicação).
@@ -84,6 +95,7 @@ public class Matrix {
      */
     public void resetMatrix () {
         //emptyCells = 0;
+        elements = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
             ArrayList<MatrixCell> holder = new ArrayList<>();
             for (int j = 0; j < 3; j++) {

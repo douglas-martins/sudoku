@@ -29,6 +29,10 @@ public class MatrixCell {
      */
     public MatrixCell (int cell, int x, int y) { this.cell = new Cell(cell, x, y); }
 
+    public MatrixCell(MatrixCell matrixCell) {
+        this.cell = new Cell(matrixCell.cell);
+    }
+
     /**
      * Retorna o valor da célula.
      * @return Cell valor da célula.

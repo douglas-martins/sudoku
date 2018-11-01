@@ -30,16 +30,18 @@ public class GameTable {
      */
     public GameTable(GameDifficulty gameDifficulty) {
         this.gameDifficulty = gameDifficulty;
-        table = new ArrayList<>(AppConfig.BASE_MATRIX);
+        table = new ArrayList<>();
+        for (int i = 0; i < AppConfig.BASE_MATRIX.size(); i++) {
+            Matrix matrix = new Matrix(AppConfig.BASE_MATRIX.get(i));
+            table.add(i, matrix);
+        }
+
         shuffleGameTable();
         correctTable = new ArrayList<>();
         for (int i = 0; i < table.size(); i++) {
-            MatrixPosition matrixPosition = table.get(i).getMatrixPosition();
-            ArrayList<ArrayList<MatrixCell>> elements = table.get(i).getElements();
-            Matrix matrix = new Matrix(matrixPosition, elements);
+            Matrix matrix = new Matrix(table.get(i));
             correctTable.add(matrix);
         }
-        //correctTable = new ArrayList<>((ArrayList<Matrix>)table.clone());
         removeElementsByGameDifficulty();
     }
 
@@ -124,9 +126,9 @@ public class GameTable {
         int counter = 0;
         for (Matrix matrix : table) {
             if (matrix.getMatrixPosition().getGroup() == fGroup) {
-                ArrayList<ArrayList<MatrixCell>> holder2 = matrix.getElements();
+                ArrayList<ArrayList<MatrixCell>> holder = matrix.getElements();
                 matrix.setElements(table.get(counter + (sGroup * 3)).getElements());
-                table.get(counter + (sGroup * 3)).setElements(holder2);
+                table.get(counter + (sGroup * 3)).setElements(holder);
                 counter++;
             }
         }
@@ -208,7 +210,7 @@ public class GameTable {
      * @param holderTable matriz/grid/mesa que será imprimida.
      * @return String com a matriz/grid/mesa.
      */
-    public String tableToString (ArrayList<Matrix> holderTable) {
+    public static String tableToString (ArrayList<Matrix> holderTable) {
         StringBuilder objTxt = new StringBuilder();
         int counter = 0;
         while (counter < 9) {
@@ -222,16 +224,16 @@ public class GameTable {
 
     /**
      * Imprimi uma linha da matriz.
-     * @param table matriz/grid/mesa da onde iremos imprimir a linha,
+     * @param holderTable matriz/grid/mesa da onde iremos imprimir a linha,
      * @param k posição na sub-matriz da célula que será imprimida.
      * @param mod modificador para pular de uma linha para outra na sub-matriz.
      * @return String com a linha da matriz.
      */
-    private String tableRowToString (ArrayList<Matrix> table, int k, int mod) {
+    private static String tableRowToString (ArrayList<Matrix> holderTable, int k, int mod) {
         StringBuilder objTxt = new StringBuilder();
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                objTxt.append(table.get(i + mod).getElements().get(k).get(j).getCell().getCellValue()).append(" | ");
+                objTxt.append(holderTable.get(i + mod).getElements().get(k).get(j).getCell().getCellValue()).append(" | ");
             }
         }
         return objTxt.toString();
@@ -255,8 +257,11 @@ public class GameTable {
         objTxt.append(this.getClass().getName())
                 .append(" @ " + Integer.toHexString(this.getClass().hashCode()))
                 .append(" { ")
-                .append("\n    table = \n" + tableToString(table))
-                .append("\n    correctTable = \n" + tableToString(correctTable))
+                .append("\n    table ")
+                .append(" @ " + Integer.toHexString(table.hashCode()))
+                .append("\n    " + tableToString(table))                .append("\n    correctTable ")
+                .append(" @ " + Integer.toHexString(correctTable.hashCode()))
+                .append("\n    " + tableToString(correctTable))
                 .append("\n    gameDifficulty = " + gameDifficulty.toString())
                 .append("\n}");
         return objTxt.toString();

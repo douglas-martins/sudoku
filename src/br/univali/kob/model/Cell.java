@@ -40,6 +40,13 @@ public class Cell {
         this.isLocked = isLocked;
     }
 
+    public Cell (Cell cell) {
+        this.cell = cell.cell;
+        this.x = cell.x;
+        this.y = cell.y;
+        this.isLocked = cell.isLocked;
+    }
+
     /**
      * Construtor da classe Cell.
      * @param cell valor da célula.

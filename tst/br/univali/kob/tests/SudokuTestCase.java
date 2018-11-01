@@ -18,11 +18,16 @@ public class SudokuTestCase {
     public void runGameTableTestCase() {
         GameTable gameTable = new GameTable(GameDifficulty.HARD);
         System.out.println(gameTable.tableToString(gameTable.getTable()));
+        System.out.println("BASE MATRIX: ");
+        System.out.println(GameTable.tableToString(AppConfig.BASE_MATRIX));
     }
 
     public void runSudokuTestCase() {
+//        System.out.println(GameTable.tableToString(AppConfig.BASE_MATRIX));
         Sudoku sudoku = new Sudoku(GameDifficulty.HARD);
-        System.out.println(sudoku.getGameTable().toString());
+//        System.out.println("GAME TABLE: \n" + sudoku.getGameTable().tableToString(sudoku.getGameTable().getTable()));
+//        System.out.println("BASE MATRIX: ");
+        System.out.println(GameTable.tableToString(AppConfig.BASE_MATRIX));
     }
 
     public static void main (String[] args) {

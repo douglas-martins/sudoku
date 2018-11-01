@@ -2,20 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55e02403-d0ad-4bcb-9bf6-69247b10f3c3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/univali/kob/model/OutOfRangeException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/univali/kob/model/Sudoku.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/univali/kob/model/SudokuApplicationView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/univali/kob/model/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/univali/kob/model/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/sudoku/br/univali/kob/model/GameTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sudoku/br/univali/kob/model/GameTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/sudoku/br/univali/kob/model/Matrix.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sudoku/br/univali/kob/model/Matrix.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/sudoku/br/univali/kob/tests/SudokuTestCase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/sudoku/br/univali/kob/tests/SudokuTestCase.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/univali/kob/model/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/univali/kob/model/Cell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/univali/kob/model/GameDifficulty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/univali/kob/model/GameDifficulty.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/univali/kob/model/GameTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/univali/kob/model/GameTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/univali/kob/model/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/univali/kob/model/Matrix.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/univali/kob/model/MatrixCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/univali/kob/model/MatrixCell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/univali/kob/model/MatrixPosition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/univali/kob/model/MatrixPosition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/univali/kob/model/helpers/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/univali/kob/model/helpers/Console.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tst/br/univali/kob/tests/GenerateMatrixTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tst/br/univali/kob/tests/SudokuTestCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tst/br/univali/kob/tests/SudokuTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/tst/br/univali/kob/tests/SudokuTestCase.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,17 +31,17 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="7" />
+          <entry key="java" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="7" />
+          <entry key="JAVA" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1184" />
+          <entry key="java" value="2710" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.run.usages" />
@@ -54,7 +49,7 @@
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1184" />
+          <entry key="JAVA" value="2710" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -91,25 +86,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/GameTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+            <state relative-caret-position="1680">
+              <caret line="114" column="68" selection-start-line="114" selection-start-column="68" selection-end-line="114" selection-end-column="68" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#9699#9700#0" expanded="true" />
-                <element signature="e#9792#9793#0" expanded="true" />
+                <element signature="e#9653#9654#0" expanded="true" />
+                <element signature="e#9746#9747#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/MatrixCell.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -117,8 +102,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tst/br/univali/kob/tests/SudokuTestCase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="24" column="61" lean-forward="true" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="61" />
+            <state relative-caret-position="435">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/Sudoku.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/AppConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="23" column="54" lean-forward="true" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -126,30 +132,34 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/Matrix.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="124" column="5" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/Sudoku.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-47">
-              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+            <state relative-caret-position="191">
+              <caret line="97" column="37" selection-start-line="97" selection-start-column="37" selection-end-line="97" selection-end-column="37" />
               <folding>
-                <element signature="e#237#238#0" expanded="true" />
-                <element signature="e#303#304#0" expanded="true" />
+                <element signature="e#2393#2394#0" expanded="true" />
+                <element signature="e#2430#2431#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/OutOfRangeException.java">
+        <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/Cell.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-356">
-              <caret line="2" selection-start-line="2" selection-end-line="7" selection-end-column="3" />
+            <state relative-caret-position="684">
+              <caret line="46" column="38" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/MatrixCell.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="372">
+              <caret line="32" column="46" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
+              <folding>
+                <element signature="e#947#948#0" expanded="true" />
+                <element signature="e#1000#1001#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -157,8 +167,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/GameDifficulty.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
+            <state relative-caret-position="735">
+              <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -181,7 +191,11 @@
       <find>static</find>
       <find>deep</find>
       <find>table</find>
+      <find>getGameTable</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -194,16 +208,16 @@
         <option value="$PROJECT_DIR$/src/br/univali/kob/model/SudokuApplicationView.java" />
         <option value="$PROJECT_DIR$/src/br/univali/kob/model/IGameActions.java" />
         <option value="$PROJECT_DIR$/src/br/univali/kob/model/helpers/OutOfRangeException.java" />
-        <option value="$PROJECT_DIR$/src/br/univali/kob/model/Cell.java" />
-        <option value="$PROJECT_DIR$/src/br/univali/kob/model/MatrixCell.java" />
         <option value="$PROJECT_DIR$/src/br/univali/kob/model/MatrixPosition.java" />
         <option value="$PROJECT_DIR$/src/br/univali/kob/model/OutOfRangeException.java" />
         <option value="$PROJECT_DIR$/src/br/univali/kob/model/helpers/Console.java" />
         <option value="$PROJECT_DIR$/src/br/univali/kob/model/Sudoku.java" />
         <option value="$PROJECT_DIR$/src/br/univali/kob/model/GameDifficulty.java" />
-        <option value="$PROJECT_DIR$/tst/br/univali/kob/tests/SudokuTestCase.java" />
         <option value="$PROJECT_DIR$/src/br/univali/kob/model/AppConfig.java" />
+        <option value="$PROJECT_DIR$/src/br/univali/kob/model/Cell.java" />
+        <option value="$PROJECT_DIR$/src/br/univali/kob/model/MatrixCell.java" />
         <option value="$PROJECT_DIR$/src/br/univali/kob/model/Matrix.java" />
+        <option value="$PROJECT_DIR$/tst/br/univali/kob/tests/SudokuTestCase.java" />
         <option value="$PROJECT_DIR$/src/br/univali/kob/model/GameTable.java" />
       </list>
     </option>
@@ -225,7 +239,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -272,16 +285,6 @@
             <path>
               <item name="sudoku" type="b2602c69:ProjectViewProjectNode" />
               <item name="sudoku" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="br" type="462c0819:PsiDirectoryNode" />
-              <item name="univali" type="462c0819:PsiDirectoryNode" />
-              <item name="kob" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="helpers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sudoku" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sudoku" type="462c0819:PsiDirectoryNode" />
               <item name="tst" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -318,12 +321,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541020097194" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541032457435" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="copyright" />
@@ -376,13 +380,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35040000" />
+    <option name="totallyTimeSpent" value="43921000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="122" y="23" width="1680" height="1027" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25579977" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -391,14 +395,14 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32299465" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" x="186" y="-815" width="1376" height="772" id="Run" order="2" type="FLOATING" visible="true" weight="0.5743315" />
+      <window_info anchor="bottom" x="66" y="-835" width="1308" height="808" id="Debug" order="3" type="FLOATING" visible="true" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32941177" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32941177" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -419,20 +423,8 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/SudokuGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/IGameActions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="48" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/SudokuGenerator.java" />
+    <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/IGameActions.java" />
     <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/SudokuApplicationView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -444,13 +436,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/Cell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="9" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/helpers/Console.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -458,24 +443,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/time/LocalDate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="190" column="28" selection-start-line="190" selection-start-column="28" selection-end-line="190" selection-end-column="28" />
-          <folding>
-            <element signature="e#7027#7028#0" expanded="true" />
-            <element signature="e#7080#7081#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/MatrixPosition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/time/LocalDate.java" />
     <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/OutOfRangeException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-356">
@@ -485,84 +453,82 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/GameDifficulty.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
+        <state relative-caret-position="735">
+          <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/util/ArrayList.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/lang/Object.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/util/Collections.java" />
+    <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/MatrixPosition.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="1282" column="10" selection-start-line="1282" selection-start-column="4" selection-end-line="1282" selection-end-column="10" />
-          <folding>
-            <element signature="e#6283#6284#0" expanded="true" />
-            <element signature="e#6351#6352#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="196" column="60" selection-start-line="196" selection-start-column="56" selection-end-line="196" selection-end-column="60" />
+        <state relative-caret-position="120">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/AppConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1095">
-          <caret line="74" column="11" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="11" />
+        <state>
+          <caret line="23" column="54" lean-forward="true" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/Sudoku.java">
+    <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/MatrixCell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-47">
-          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        <state relative-caret-position="372">
+          <caret line="32" column="46" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
           <folding>
-            <element signature="e#237#238#0" expanded="true" />
-            <element signature="e#303#304#0" expanded="true" />
+            <element signature="e#947#948#0" expanded="true" />
+            <element signature="e#1000#1001#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/Cell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="46" column="38" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/Matrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="97" column="37" selection-start-line="97" selection-start-column="37" selection-end-line="97" selection-end-column="37" />
+          <folding>
+            <element signature="e#2393#2394#0" expanded="true" />
+            <element signature="e#2430#2431#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tst/br/univali/kob/tests/SudokuTestCase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="24" column="61" lean-forward="true" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/MatrixCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/util/Collections.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="1285" column="30" selection-start-line="1285" selection-start-column="30" selection-end-line="1285" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/Matrix.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="124" column="5" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
+        <state relative-caret-position="435">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/GameTable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+        <state relative-caret-position="1680">
+          <caret line="114" column="68" selection-start-line="114" selection-start-column="68" selection-end-line="114" selection-end-column="68" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#9699#9700#0" expanded="true" />
-            <element signature="e#9792#9793#0" expanded="true" />
+            <element signature="e#9653#9654#0" expanded="true" />
+            <element signature="e#9746#9747#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/Sudoku.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
