@@ -1,4 +1,4 @@
-package br.univali.kob.model;
+package br.univali.kob.model.sudoku;
 
 /** Representa a dificuldade da aplicação.
  * @author Douglas Martins

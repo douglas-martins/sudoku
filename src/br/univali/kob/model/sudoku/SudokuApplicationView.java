@@ -1,6 +1,5 @@
 package br.univali.kob.model.sudoku;
 
-import br.univali.kob.model.*;
 import br.univali.kob.model.helpers.Console;
 import br.univali.kob.model.helpers.OutOfRangeException;
 import br.univali.kob.model.helpers.Validator;

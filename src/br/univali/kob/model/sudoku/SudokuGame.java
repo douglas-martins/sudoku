@@ -1,7 +1,6 @@
 package br.univali.kob.model.sudoku;
 
 import br.univali.kob.model.AppConfig;
-import br.univali.kob.model.GameDifficulty;
 import br.univali.kob.model.matrix.MatrixCell;
 import br.univali.kob.model.helpers.Console;
 import br.univali.kob.model.helpers.OutOfRangeException;

@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55e02403-d0ad-4bcb-9bf6-69247b10f3c3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/tst/br/univali/kob/tests/SudokuTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/tst/br/univali/kob/tests/SudokuClassesTestCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/univali/kob/model/GameDifficulty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/univali/kob/model/sudoku/GameDifficulty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/univali/kob/model/sudoku/SudokuApplicationView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/univali/kob/model/sudoku/SudokuApplicationView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/univali/kob/model/sudoku/SudokuGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/univali/kob/model/sudoku/SudokuGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tst/br/univali/kob/tests/SudokuClassesTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/tst/br/univali/kob/tests/SudokuClassesTestCase.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,18 +28,18 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="54" />
+          <entry key="java" value="56" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="54" />
+          <entry key="JAVA" value="56" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="7" />
-          <entry key="java" value="10401" />
+          <entry key="java" value="10902" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.run.usages" />
@@ -44,7 +47,7 @@
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="10401" />
+          <entry key="JAVA" value="10902" />
           <entry key="PLAIN_TEXT" value="7" />
         </counts>
       </usages-collector>
@@ -88,18 +91,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tst/br/univali/kob/tests/SudokuClassesTestCase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="51" column="32" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/sudoku/SudokuGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -133,11 +124,20 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/sudoku/GameDifficulty.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/sudoku/SudokuApplicationView.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#SudokuApplicationView#0" />
@@ -161,7 +161,7 @@
         <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/sudoku/SudokuGame.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
               <folding>
                 <element signature="docComment;class#SudokuGame#0" />
                 <element signature="docComment;field#sudokuGenerator#0;class#SudokuGame#0" />
@@ -334,6 +334,36 @@
             <path>
               <item name="sudoku" type="b2602c69:ProjectViewProjectNode" />
               <item name="sudoku" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="br" type="462c0819:PsiDirectoryNode" />
+              <item name="univali" type="462c0819:PsiDirectoryNode" />
+              <item name="kob" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="helpers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sudoku" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sudoku" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="br" type="462c0819:PsiDirectoryNode" />
+              <item name="univali" type="462c0819:PsiDirectoryNode" />
+              <item name="kob" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="matrix" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sudoku" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sudoku" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="br" type="462c0819:PsiDirectoryNode" />
+              <item name="univali" type="462c0819:PsiDirectoryNode" />
+              <item name="kob" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="sudoku" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sudoku" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sudoku" type="462c0819:PsiDirectoryNode" />
               <item name="tst" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -375,7 +405,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541131572079" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541131806750" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -450,12 +480,12 @@
       <workItem from="1540939894399" duration="9947000" />
       <workItem from="1541094252143" duration="11808000" />
       <workItem from="1541112514194" duration="5506000" />
-      <workItem from="1541119236965" duration="6784000" />
+      <workItem from="1541119236965" duration="7084000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88068000" />
+    <option name="totallyTimeSpent" value="88368000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -468,7 +498,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25885227" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -478,7 +507,7 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32941177" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
       <window_info anchor="bottom" auto_hide="true" x="143" y="385" width="1638" height="302" id="Run" order="2" weight="0.48770052" />
       <window_info anchor="bottom" x="33" y="-877" width="1308" height="808" id="Debug" order="3" weight="0.84705883" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -515,13 +544,6 @@
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/util/ArrayList.java" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/util/Collection.java" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/util/AbstractCollection.java" />
-    <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/GameDifficulty.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1005">
-          <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/src.zip!/java/io/Serializable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="790">
@@ -609,7 +631,7 @@
     <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/sudoku/SudokuApplicationView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#SudokuApplicationView#0" />
@@ -631,7 +653,7 @@
     <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/sudoku/SudokuGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
           <folding>
             <element signature="docComment;class#SudokuGame#0" />
             <element signature="docComment;field#sudokuGenerator#0;class#SudokuGame#0" />
@@ -700,6 +722,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tst/br/univali/kob/tests/SudokuClassesTestCase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="64" column="100" selection-start-line="64" selection-start-column="100" selection-end-line="64" selection-end-column="100" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/sudoku/SudokuGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="55">
@@ -731,13 +763,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tst/br/univali/kob/tests/SudokuClassesTestCase.java">
+    <entry file="file://$PROJECT_DIR$/src/br/univali/kob/model/sudoku/GameDifficulty.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="51" column="32" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="120">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
         </state>
       </provider>
     </entry>
