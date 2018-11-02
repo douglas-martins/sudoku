@@ -1,6 +1,13 @@
-package br.univali.kob.model;
+package br.univali.kob.model.sudoku;
 
+import br.univali.kob.model.*;
 import br.univali.kob.model.helpers.Console;
+import br.univali.kob.model.helpers.OutOfRangeException;
+import br.univali.kob.model.helpers.Validator;
+import br.univali.kob.model.matrix.Cell;
+import br.univali.kob.model.matrix.Matrix;
+import br.univali.kob.model.matrix.MatrixCell;
+import br.univali.kob.model.matrix.MatrixPosition;
 
 /** Representa a parte que cuida dos I/O
  * para o game.
@@ -47,14 +54,18 @@ public class SudokuApplicationView {
         int jumpX = MatrixPosition.adjustSubMatrixPosition(matrixCell.getCell().getX());
         int jumpY = MatrixPosition.adjustSubMatrixPosition(matrixCell.getCell().getY());
 
+        Validator.notNull(getSubMatrixPosition(new int[] {
+                matrixCell.getCell().getX(), matrixCell.getCell().getY() }), "SubMatrix");
         MatrixPosition matrixPosition = getSubMatrixPosition(new int[] {
                 matrixCell.getCell().getX(), matrixCell.getCell().getY() });
 
-        if (sudokuGame.getSudoku().getTable()
-                .get(matrixPosition.getValue()).getElements()
-                .get(jumpX).get(jumpY).getCell().getIsLocked()) { // criar exceção
-            System.out.println("LOCAL INVALIDO/BLOQUEADO.\n");
-            return;
+        try {
+            if (!sudokuGame.isValidGameTableCell(matrixCell)) {
+                throw new IllegalArgumentException("Local inválido/bloqueado! Por favor, entre com uma nova posição\n");
+            }
+        } catch (IllegalArgumentException e) {
+            System.out.println(e);
+            placeMatrixCell(askForCellValue(askForInputPosition()));
         }
 
         sudokuGame.getSudoku().getTable()
@@ -84,6 +95,13 @@ public class SudokuApplicationView {
                 + "\n");
         if (y > 0) y--;
 
+        try {
+            sudokuGame.getSudoku().getTable().get(0).getElements().get(x).get(y);
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("Invalid position! " + e);
+            System.out.println();
+            askForInputPosition();
+        }
         return new int[] { x, y };
     }
 
@@ -93,11 +111,19 @@ public class SudokuApplicationView {
      * @return MatrixCell com o valor célula e sua posição na matriz.
      */
     private MatrixCell askForCellValue(int[] positions) {
-        System.out.println("GAME TABLE: ");
         int value = Console.readlnInt("Digite um valor para célula."
                 + "\n(0 apaga a célula, 1..9 numeros validos)"
                 + "\nEx: 1"
                 + "\n");
+        try {
+            if (!sudokuGame.isValidGameTableCellValue(new MatrixCell(value, positions[0], positions[1]))) {
+                throw new OutOfRangeException(value, "Valor invalido para uma celula!", 1, 9);
+            }
+        } catch (OutOfRangeException e) {
+            System.out.println(e);
+            askForCellValue(positions);
+        }
+
         Cell cell = new Cell(value,
                 MatrixPosition.adjustSubMatrixPosition(positions[0]),
                 MatrixPosition.adjustSubMatrixPosition(positions[1]),
@@ -115,7 +141,14 @@ public class SudokuApplicationView {
                 + "\n2) Médio."
                 + "\n3) Difícil."
                 + "\n");
-        return GameDifficulty.values()[difficulty - 1];
+        try {
+            return GameDifficulty.values()[difficulty - 1];
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Invalid choice! " + e + "\n");
+            System.out.println();
+            askForDifficulty();
+        }
+        return null;
     }
 
     /**

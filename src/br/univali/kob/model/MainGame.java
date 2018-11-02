@@ -1,5 +1,7 @@
 package br.univali.kob.model;
 
+import br.univali.kob.model.sudoku.Sudoku;
+
 public class MainGame {
     private static Sudoku sudoku;
 

@@ -1,4 +1,4 @@
-package br.univali.kob.model;
+package br.univali.kob.model.matrix;
 
 import java.util.ArrayList;
 

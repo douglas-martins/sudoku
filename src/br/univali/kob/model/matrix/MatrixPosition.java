@@ -1,4 +1,4 @@
-package br.univali.kob.model;
+package br.univali.kob.model.matrix;
 
 /** Representa posição da sub-matriz na matriz/grid/mesa.
  * @author Douglas Martins

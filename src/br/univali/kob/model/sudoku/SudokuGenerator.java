@@ -1,4 +1,10 @@
-package br.univali.kob.model;
+package br.univali.kob.model.sudoku;
+
+import br.univali.kob.model.*;
+import br.univali.kob.model.helpers.Validator;
+import br.univali.kob.model.matrix.Cell;
+import br.univali.kob.model.matrix.Matrix;
+import br.univali.kob.model.matrix.MatrixCell;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -106,7 +112,7 @@ public class SudokuGenerator {
      * @param fRow posição da primeira linha que será trocada.
      * @param sRow posição da segunda linha que será trocada.
      */
-    private void swapGameTableRows(int fRow, int sRow) { // primeiro n pode ser maior que o segundo
+    private void swapGameTableRows(int fRow, int sRow) {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 MatrixCell holder = table.get(i).getElements().get(fRow).get(j);
@@ -122,7 +128,7 @@ public class SudokuGenerator {
      * @param fGroup posição do primeiro grupo que será trocada.
      * @param sGroup posição do segundo grupo que será trocada.
      */
-    private void swapGameTableGroups(int fGroup, int sGroup) { // primeiro n pode ser maior que o segundo
+    private void swapGameTableGroups(int fGroup, int sGroup) {
         int counter = 0;
         for (Matrix matrix : table) {
             if (matrix.getMatrixPosition().getGroup() == fGroup) {
@@ -181,6 +187,8 @@ public class SudokuGenerator {
      *         após remover um elemento.
      */
     private ArrayList<int[]> removeOneCellFromGrid(ArrayList<int[]> holder, Matrix matrix, int counter) {
+        Validator.notNull(holder, holder.getClass().getName());
+        Validator.notNull(matrix, matrix.getClass().getName());
         int elementPosition = new Random().nextInt(counter);
         if (matrix.getElements().get(holder.get(elementPosition)[0])
                 .get(holder.get(elementPosition)[1]).getCell().getCellValue() == 0) return new ArrayList<>(holder);
@@ -211,6 +219,7 @@ public class SudokuGenerator {
      * @return String com a matriz/grid/mesa.
      */
     public String tableToString (ArrayList<Matrix> holderTable) {
+        Validator.notNull(holderTable, holderTable.getClass().getName());
         StringBuilder objTxt = new StringBuilder();
         int counter = 0;
         while (counter < 9) {
@@ -230,6 +239,7 @@ public class SudokuGenerator {
      * @return String com a linha da matriz.
      */
     private String tableRowToString (ArrayList<Matrix> holderTable, int k, int mod) {
+        Validator.notNull(holderTable, holderTable.getClass().getName());
         StringBuilder objTxt = new StringBuilder();
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {

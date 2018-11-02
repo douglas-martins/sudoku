@@ -1,6 +1,11 @@
 package br.univali.kob.tests;
 
 import br.univali.kob.model.*;
+import br.univali.kob.model.matrix.Matrix;
+import br.univali.kob.model.matrix.MatrixPosition;
+import br.univali.kob.model.sudoku.SudokuApplicationView;
+import br.univali.kob.model.sudoku.SudokuGame;
+import br.univali.kob.model.sudoku.SudokuGenerator;
 
 
 public class SudokuTestCase {
@@ -31,8 +36,8 @@ public class SudokuTestCase {
     }
 
     public void runSudokuApplicationViewTestCase() {
-        SudokuApplicationView sudokuApplicationView = new SudokuApplicationView();
-        sudokuApplicationView.placeMatrixCell();
+        SudokuApplicationView sudokuApplicationView = new SudokuApplicationView(SudokuApplicationView.askForDifficulty());
+        sudokuApplicationView.askForPlay();
         System.out.println("GAME TABLE: ");
         System.out.println(sudokuApplicationView.getSudokuGame().getSudoku()
                 .tableToString(sudokuApplicationView.getSudokuGame().getSudoku().getTable()));
@@ -44,6 +49,6 @@ public class SudokuTestCase {
         // sudokuTestCase.runBaseMatrixTest();
         // sudokuTestCase.runGameTableTestCase();
         // sudokuTestCase.runSudokuTestCase();
-        sudokuTestCase.runSudokuApplicationViewTestCase();
+        // sudokuTestCase.runSudokuApplicationViewTestCase();
     }
 }

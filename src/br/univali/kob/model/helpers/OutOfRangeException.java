@@ -1,4 +1,4 @@
-package br.univali.kob.model;
+package br.univali.kob.model.helpers;
 
 /** Representa uma célula.
  * @author Marcello Thiry

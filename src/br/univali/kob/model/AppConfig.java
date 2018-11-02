@@ -1,5 +1,9 @@
 package br.univali.kob.model;
 
+import br.univali.kob.model.matrix.Matrix;
+import br.univali.kob.model.matrix.MatrixCell;
+import br.univali.kob.model.matrix.MatrixPosition;
+
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
@@ -50,8 +54,8 @@ public class AppConfig {
      * Carrega as configurações de @SETTINGS e atribui os valores nos atributos.
      */
     private static void loadSettings() {
-        SETTINGS.add("Sudoku");
-        SETTINGS.add("1.0");
+        SETTINGS.add("SUDOKU");
+        SETTINGS.add("v 1.0");
         SETTINGS.add(generateBaseMatrix(new int[][]
                 { { 1, 2, 3, 4, 5, 6, 7, 8, 9 },
                   { 4, 5, 6, 7, 8, 9, 1, 2, 3 },

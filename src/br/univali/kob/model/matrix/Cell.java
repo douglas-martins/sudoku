@@ -1,4 +1,4 @@
-package br.univali.kob.model;
+package br.univali.kob.model.matrix;
 
 import java.util.Objects;
 
@@ -106,9 +106,7 @@ public class Cell {
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(cell, isLocked, x, y);
-    }
+    public int hashCode() { return Objects.hash(cell, isLocked, x, y); }
 
     @Override
     public String toString() {

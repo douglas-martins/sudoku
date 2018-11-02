@@ -1,4 +1,4 @@
-package br.univali.kob.model;
+package br.univali.kob.model.matrix;
 
 /** Representa uma célula da matriz.
  * @author Douglas Martins

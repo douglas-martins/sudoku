@@ -1,4 +1,11 @@
-package br.univali.kob.model;
+package br.univali.kob.model.sudoku;
+
+import br.univali.kob.model.AppConfig;
+import br.univali.kob.model.GameDifficulty;
+import br.univali.kob.model.matrix.MatrixCell;
+import br.univali.kob.model.helpers.Console;
+import br.univali.kob.model.helpers.OutOfRangeException;
+import br.univali.kob.model.helpers.Validator;
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -84,7 +91,8 @@ public class SudokuGame {
      * @return boolean true se o jogo acabou e false se não.
      */
     public boolean isGameOver() {
-        return sudokuGenerator.getGameTableEmptyCellsNumber() <= 0;
+        return !Console.ask("Você deseja continua o jogo? (s/n)")
+                || checkWinningCondition();
     }
 
     /**
@@ -101,9 +109,10 @@ public class SudokuGame {
      * @return boolean true se válido, false se inválido.
      * @throws OutOfRangeException
      */
-    public boolean isValidGameTablePosition(MatrixCell matrixCell) throws OutOfRangeException { // trocar p/ unchecked
-        return matrixCell.getCell().getX() <= 9 &&
-                matrixCell.getCell().getY() <= 9;
+    public boolean isValidGameTablePosition(MatrixCell matrixCell) {
+        Validator.notNull(matrixCell, matrixCell.getClass().getName());
+        return matrixCell.getCell().getX() <= 9 || matrixCell.getCell().getX() < 1 &&
+                matrixCell.getCell().getY() <= 9 || matrixCell.getCell().getY() < 1;
     }
 
     /**
@@ -112,7 +121,8 @@ public class SudokuGame {
      * @return boolean true se válido, false se inválido.
      * @throws OutOfRangeException
      */
-    public boolean isValidGameTableCellValue(MatrixCell matrixCell) throws OutOfRangeException { // trocar p/ unchecked
+    public boolean isValidGameTableCellValue(MatrixCell matrixCell) {
+        Validator.notNull(matrixCell, matrixCell.getClass().getName());
         return matrixCell.getCell().getCellValue() <= 9 &&
                 matrixCell.getCell().getCellValue() >= 0;
     }
@@ -123,6 +133,7 @@ public class SudokuGame {
      * @return boolean true se travado, false se destravado.
      */
     public boolean isValidGameTableCell (MatrixCell matrixCell) {
+        Validator.notNull(matrixCell, matrixCell.getClass().getName());
         return matrixCell.getCell().getIsLocked();
     }
 
@@ -132,5 +143,13 @@ public class SudokuGame {
      */
     private LocalDate getTimeNow() {
         return LocalDate.parse(LocalDate.now().format(AppConfig.DATE_FORMAT), AppConfig.DATE_FORMAT);
+    }
+
+    /**
+     *
+     * @return
+     */
+    private boolean checkWinningCondition() {
+        return sudokuGenerator.getTable().hashCode() == sudokuGenerator.getCorrectTable().hashCode();
     }
 }

@@ -79,6 +79,6 @@ public final class Console {
      * @return true se a resposta for sim, false caso contrário
      */
      public static boolean ask(String question) {
-        return readlnString("\n" + question + " ").equals("s");
+        return readlnString("\n" + question + " ").toLowerCase().equals("s");
      }
 }
