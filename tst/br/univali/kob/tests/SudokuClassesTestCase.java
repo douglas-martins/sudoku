@@ -8,7 +8,7 @@ import br.univali.kob.model.sudoku.SudokuGame;
 import br.univali.kob.model.sudoku.SudokuGenerator;
 
 
-public class SudokuTestCase {
+public class SudokuClassesTestCase {
     public void runMatrixTestCase() {
         Matrix matrix = new Matrix(MatrixPosition.ONE);
         System.out.println(matrix.toString());
@@ -36,7 +36,7 @@ public class SudokuTestCase {
     }
 
     public void runSudokuApplicationViewTestCase() {
-        SudokuApplicationView sudokuApplicationView = new SudokuApplicationView(SudokuApplicationView.askForDifficulty());
+        SudokuApplicationView sudokuApplicationView = new SudokuApplicationView();
         sudokuApplicationView.askForPlay();
         System.out.println("GAME TABLE: ");
         System.out.println(sudokuApplicationView.getSudokuGame().getSudoku()
@@ -44,11 +44,11 @@ public class SudokuTestCase {
     }
 
     public static void main (String[] args) {
-        SudokuTestCase sudokuTestCase = new SudokuTestCase();
-        // sudokuTestCase.runMatrixTest();
-        // sudokuTestCase.runBaseMatrixTest();
-        // sudokuTestCase.runGameTableTestCase();
-        // sudokuTestCase.runSudokuTestCase();
-        // sudokuTestCase.runSudokuApplicationViewTestCase();
+        SudokuClassesTestCase sudokuClassesTestCase = new SudokuClassesTestCase();
+        // sudokuClassesTestCase.runMatrixTest();
+        // sudokuClassesTestCase.runBaseMatrixTest();
+        // sudokuClassesTestCase.runGameTableTestCase();
+        // sudokuClassesTestCase.runSudokuTestCase();
+        // sudokuClassesTestCase.runSudokuApplicationViewTestCase();
     }
 }
